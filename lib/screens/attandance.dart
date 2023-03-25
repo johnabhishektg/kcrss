@@ -1,9 +1,25 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
+import '../widgets/nav_header.dart';
 
 const List<String> classList = <String>['CLASS', '6th', '7th', '8th', '9th'];
 const List<String> dateList = <String>['DATE', '6th', '7th', '8th', '9th'];
 const List<String> timeList = <String>['TIME', '6th', '7th', '8th', '9th'];
+
+class Attendance extends StatelessWidget {
+  const Attendance({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+        child: NavHeader(context),
+      ),
+      body: ClassAttandance(),
+    );
+  }
+}
 
 class ClassAttandance extends StatefulWidget {
   const ClassAttandance({super.key});
@@ -48,6 +64,9 @@ class _AttandanceState extends State<ClassAttandance> {
               ),
             ),
           ),
+
+          // BUTTONS
+
           Column(
             children: [
               // DROPDOWN BUTTONS
@@ -177,37 +196,6 @@ class _AttandanceState extends State<ClassAttandance> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class Attendance extends StatelessWidget {
-  const Attendance({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 100,
-        backgroundColor: tdBGColor,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.arrow_back_ios),
-          color: tdBlack,
-        ),
-        title: Container(
-          padding: EdgeInsets.only(left: 75),
-          child: IconButton(
-            icon: Image.asset('assets/images/logo.png'),
-            iconSize: 80,
-            onPressed: () {},
-          ),
-        ),
-      ),
-      body: ClassAttandance(),
     );
   }
 }

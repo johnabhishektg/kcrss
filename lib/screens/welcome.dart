@@ -107,34 +107,6 @@ class _homePage extends StatelessWidget {
                         backgroundColor: primaryLime,
                         foregroundColor: tdBlack,
                         child: const Icon(Icons.arrow_forward),
-                        // child: Text(
-                        //   "Start",
-                        //   //ನಮೂದಿಸಿ
-                        //   textAlign: TextAlign.center,
-                        //   style: TextStyle(
-                        //     //fontSize: 32,
-                        //     fontWeight: FontWeight.w400,
-                        //   ),
-                        // ),
-                        // style: ButtonStyle(
-                        //     backgroundColor:
-                        //         MaterialStatePropertyAll(primaryLime),
-                        //     foregroundColor:
-                        //         MaterialStateProperty.all(tdBlack),
-                        //     padding:
-                        //         MaterialStateProperty.all(EdgeInsets.all(32)),
-                        //     side: MaterialStateProperty.all(
-                        //       const BorderSide(
-                        //         color: tdBlack,
-                        //         width: 2,
-                        //       ),
-                        //     ),
-                        //     // shape: MaterialStateProperty.all(
-                        //     //   RoundedRectangleBorder(
-                        //     //     borderRadius: BorderRadius.circular(360),
-                        //     //   ),
-                        //     // ),
-                        //     shadowColor: MaterialStateProperty.all(tdBlack)),
                       ),
                     ]),
                   ),

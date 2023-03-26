@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kcrss/widgets/home_button.dart';
-import '../screens/attandance.dart';
 import '../constants/colors.dart';
 import '../widgets/nav_header.dart';
 import '../widgets/title_header.dart';
@@ -12,11 +11,11 @@ class MainMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
+        preferredSize: const Size.fromHeight(100),
         child: NavHeader(context),
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         alignment: Alignment.topCenter,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -41,23 +40,26 @@ class MainMenu extends StatelessWidget {
                   textColor: tdBlack,
                   engText: 'Attendance',
                   kanText: 'ಹಾಜರಾತಿ',
+                  pressBtn: 'attendance',
                 ),
 
                 // PROGRESS REPORT
                 HomeBtn(
-                    bgColor: red,
-                    textColor: tdBlack,
-                    engText: 'Progress Report',
-                    kanText: 'ಪ್ರಗತಿ ಪತ್ರ'),
+                  bgColor: red,
+                  textColor: tdBlack,
+                  engText: 'Progress Report',
+                  kanText: 'ಪ್ರಗತಿ ಪತ್ರ',
+                  pressBtn: 'progress',
+                ),
 
                 // GALLERY
                 HomeBtn(
-                    bgColor: violet,
-                    textColor: tdBlack,
-                    engText: 'Gallery',
-                    kanText: 'ಗ್ಯಾಲರಿ'),
-//                 "ಗ್ಯಾಲರಿ"
-// "Gallery"
+                  bgColor: violet,
+                  textColor: tdBlack,
+                  engText: 'Gallery',
+                  kanText: 'ಗ್ಯಾಲರಿ',
+                  pressBtn: 'gallery',
+                ),
               ],
             ),
           ],

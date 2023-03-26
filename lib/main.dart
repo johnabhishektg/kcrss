@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kcrss/screens/homepage/attendance.dart';
+import 'package:kcrss/screens/main_menu.dart';
 import '../screens/welcome.dart';
 import 'package:google_fonts/google_fonts.dart';
 

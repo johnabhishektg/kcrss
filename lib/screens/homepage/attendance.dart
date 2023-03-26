@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../constants/colors.dart';
-import '../widgets/nav_header.dart';
+import 'package:kcrss/screens/homepage/attendance_list.dart';
+import '../../constants/colors.dart';
+import '../../widgets/nav_header.dart';
 
 const List<String> classList = <String>['CLASS', '6th', '7th', '8th', '9th'];
 const List<String> dateList = <String>['DATE', '6th', '7th', '8th', '9th'];
@@ -90,7 +91,7 @@ class _AttandanceState extends State<ClassAttandance> {
                     dropdownColor: darkLime,
                     style: const TextStyle(
                       color: tdBlack,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
                     //alignment: Alignment.center,
@@ -131,7 +132,7 @@ class _AttandanceState extends State<ClassAttandance> {
                     dropdownColor: darkLime,
                     style: const TextStyle(
                       color: tdBlack,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
                     //alignment: Alignment.center,
@@ -172,7 +173,7 @@ class _AttandanceState extends State<ClassAttandance> {
                     dropdownColor: darkLime,
                     style: const TextStyle(
                       color: tdBlack,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
                     //alignment: Alignment.center,
@@ -192,7 +193,42 @@ class _AttandanceState extends State<ClassAttandance> {
                   ),
                 ),
               ),
+
+              Container(
+                padding: EdgeInsets.only(top: 80),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AttendanceList()),
+                    );
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(darkLime),
+                    foregroundColor: MaterialStateProperty.all(tdBlack),
+                    padding: MaterialStateProperty.all(
+                      EdgeInsets.all(20),
+                    ),
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50)),
+                    ),
+                    minimumSize: MaterialStateProperty.all(const Size(200, 30)),
+                  ),
+                  child: Text(
+                    "SUBMIT",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ),
             ],
+
+            //SUBMIT
           ),
         ],
       ),

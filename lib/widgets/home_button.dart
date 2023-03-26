@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
-import '../screens/attandance.dart';
+import '../screens/homepage/attendance.dart';
 
 class HomeBtn extends StatelessWidget {
   final Color bgColor;
   final Color textColor;
   final String engText;
   final String kanText;
+  String pressBtn;
 
-  const HomeBtn({
+  HomeBtn({
     super.key,
     required this.bgColor,
     required this.textColor,
     required this.engText,
     required this.kanText,
+    required this.pressBtn,
   });
 
   @override
@@ -22,14 +24,17 @@ class HomeBtn extends StatelessWidget {
       padding: EdgeInsets.only(top: 32),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const Attendance()),
-          );
+          // Navigator.pushReplacementNamed(context, 'attendence');
+          if (pressBtn == 'attendance') {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Attendance()),
+            );
+          }
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(bgColor),
-          foregroundColor: MaterialStateProperty.all(tdBlack),
+          foregroundColor: MaterialStateProperty.all(textColor),
           padding: MaterialStateProperty.all(
             EdgeInsets.all(20),
           ),
@@ -42,15 +47,15 @@ class HomeBtn extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Text(
-              "ಹಾಜರಾತಿ",
+            Text(
+              kanText,
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const Text(
-              "Attendance",
+            Text(
+              engText,
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w400,

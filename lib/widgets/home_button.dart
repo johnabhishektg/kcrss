@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kcrss/screens/homepage/gallery.dart';
 import '../constants/colors.dart';
 import '../screens/homepage/attendance.dart';
 
@@ -29,6 +30,11 @@ class HomeBtn extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const Attendance()),
+            );
+          } else if (pressBtn == 'gallery') {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Gallery()),
             );
           }
         },
